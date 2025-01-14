@@ -26,7 +26,7 @@ main() {
         "$DOTFILES/colors.properties" \
         "$DOTFILES/font.ttf" \
         "$HOME/.termux"
-    cp "$DOTFILES/init.nvim" "$HOME/.config/nvim/"
+    cp "$DOTFILES/init.vim" "$HOME/.config/nvim/"
     cp \
         "$DOTFILES/.zshrc" \
         "$DOTFILES/.zprofile" \
@@ -35,7 +35,7 @@ main() {
     echo "termux-wake-unlock" >"$HOME/.zlogout"
     touch "$HOME/.hushlogin"
 
-    printf "Setting up phone storage, give permissions when asked"
+    printf "Setting up phone storage, give permissions when asked.\n"
     if [[ ! -d "$HOME/storage" ]]; then
         termux-setup-storage
     fi
